@@ -1,0 +1,13 @@
+MESSAGE  		SENDER  	RECEIVER	  	        JSON
+Subscribe_Message 	Consumer	Broker			    {"command":"SUBSCRIBE" ,"type":"JSONQueue" or Serializer.JSON ,topic:"topic"}
+Publish_Message		Producer	Broker/Consumer		{"command":"PUBLISH" ,"type":"JSONQueue" or Serializer.JSON ,topic:"topic" ,message:"message"}
+List_Message 		Consumer	Broker			    {"command":"LIST" ,"type":"JSONQueue" or Serializer.JSON}
+List_Response 		Broker 		Consumer		    {"command":"LIST" ,"type":"JSONQueue" or Serializer.JSON, "topic_list":"topic_list"}
+Cancel_Message 		Consumer	Broker			    {"command":"CANCEL" ,"type":"JSONQueue" or Serializer.JSON, "topic":"topic_"}
+
+
+Subscribe_Message - Subscribes to a topic
+Publish_Message - Publishes a message
+List_Message - Asks broker for list
+List_Response - Sends list
+Cancel_Message - Cancels
